@@ -1,5 +1,6 @@
-# Advancement Creator [![](https://jitpack.io/v/xyz.mlserver/AdvancementCreator.svg)](https://jitpack.io/v/#xyz.mlserver/AdvancementCreator)
+# Advancement Creator 
 
+[comment]: <> ([![]&#40;https://jitpack.io/v/xyz.mlserver/AdvancementCreator.svg&#41;]&#40;https://jitpack.io/v/#xyz.mlserver/AdvancementCreator&#41;)
 [![Twitter](https://badgen.net/twitter/follow/monster_2408?icon=twitter)](https://twitter.com/monster_2408)
 [![Discord](https://discord.com/api/guilds/556844677115150366/widget.png)](https://discord.mlserver.xyz)
 
@@ -39,7 +40,7 @@ repositories {
 }
 
 dependencies {
-  compile 'xyz.mlserver:AdvancementCreator:1.0.0'
+  compile 'xyz.mlserver:AdvancementCreator:v1.0.0'
 }
 ```
 
@@ -58,7 +59,7 @@ dependencies {
     <dependency>
         <groupId>xyz.mlserver</groupId>
         <artifactId>AdvancementCreator</artifactId>
-        <version>1.0.0</version>
+        <version>v1.0.0</version>
     </dependency>
 </dependencies>
 ```
