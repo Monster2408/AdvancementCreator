@@ -1,8 +1,8 @@
 package xyz.mlserver.advancementcreator.shared;
 
 import com.google.gson.JsonObject;
-import org.jetbrains.annotations.Nullable;
 import org.apache.commons.lang.Validate;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Collections;
 import java.util.HashMap;

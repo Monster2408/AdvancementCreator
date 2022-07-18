@@ -1,9 +1,9 @@
 package xyz.mlserver.advancementcreator.trigger;
 
 import com.google.gson.JsonObject;
-import xyz.mlserver.advancementcreator.util.JsonBuilder;
 import org.apache.commons.lang.Validate;
 import org.bukkit.NamespacedKey;
+import xyz.mlserver.advancementcreator.util.JsonBuilder;
 
 /**
  * Fires whenever the player unlocks a recipe. The trigger is invalid without the {@code recipe} property, therefore it must be assigned in the constructor.

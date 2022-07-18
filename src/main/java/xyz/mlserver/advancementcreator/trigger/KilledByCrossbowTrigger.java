@@ -1,13 +1,13 @@
 package xyz.mlserver.advancementcreator.trigger;
 
 import com.google.gson.JsonObject;
-import xyz.mlserver.advancementcreator.shared.EntityObject;
-import xyz.mlserver.advancementcreator.shared.SharedObject;
-import xyz.mlserver.advancementcreator.util.JsonBuilder;
 import org.apache.commons.lang.Validate;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import xyz.mlserver.advancementcreator.shared.EntityObject;
+import xyz.mlserver.advancementcreator.shared.SharedObject;
+import xyz.mlserver.advancementcreator.util.JsonBuilder;
 
 import java.util.ArrayList;
 import java.util.Collections;

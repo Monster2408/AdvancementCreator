@@ -4,12 +4,12 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import org.jetbrains.annotations.Nullable;
-import xyz.mlserver.advancementcreator.shared.SharedEnum;
-import xyz.mlserver.advancementcreator.shared.SharedObject;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.chat.ComponentSerializer;
 import org.bukkit.NamespacedKey;
+import org.jetbrains.annotations.Nullable;
+import xyz.mlserver.advancementcreator.shared.SharedEnum;
+import xyz.mlserver.advancementcreator.shared.SharedObject;
 
 import java.lang.reflect.Type;
 import java.util.Collection;

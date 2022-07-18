@@ -1,9 +1,9 @@
 package xyz.mlserver.advancementcreator.shared;
 
 import com.google.gson.JsonObject;
+import org.apache.commons.lang.Validate;
 import org.jetbrains.annotations.Nullable;
 import xyz.mlserver.advancementcreator.util.JsonBuilder;
-import org.apache.commons.lang.Validate;
 
 /**
  * Specifies information about a distance between two points.

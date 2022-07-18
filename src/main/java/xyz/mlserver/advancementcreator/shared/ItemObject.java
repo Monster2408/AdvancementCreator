@@ -2,10 +2,10 @@ package xyz.mlserver.advancementcreator.shared;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import org.apache.commons.lang.Validate;
 import org.jetbrains.annotations.Nullable;
 import xyz.mlserver.advancementcreator.util.JsonBuilder;
 import xyz.mlserver.advancementcreator.util.Validator;
-import org.apache.commons.lang.Validate;
 
 import java.util.Collections;
 import java.util.HashSet;

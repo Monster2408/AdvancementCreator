@@ -2,11 +2,11 @@ package xyz.mlserver.advancementcreator;
 
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
+import org.apache.commons.lang.Validate;
+import org.bukkit.NamespacedKey;
 import org.jetbrains.annotations.Nullable;
 import xyz.mlserver.advancementcreator.util.JsonBuilder;
 import xyz.mlserver.advancementcreator.util.Validator;
-import org.apache.commons.lang.Validate;
-import org.bukkit.NamespacedKey;
 
 import java.lang.reflect.Type;
 import java.util.Collections;

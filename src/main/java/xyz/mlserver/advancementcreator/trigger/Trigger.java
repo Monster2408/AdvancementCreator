@@ -1,11 +1,11 @@
 package xyz.mlserver.advancementcreator.trigger;
 
 import com.google.gson.JsonObject;
+import org.apache.commons.lang.Validate;
 import org.jetbrains.annotations.Nullable;
+import xyz.mlserver.advancementcreator.Advancement;
 import xyz.mlserver.advancementcreator.shared.SharedEnum;
 import xyz.mlserver.advancementcreator.util.JsonBuilder;
-import org.apache.commons.lang.Validate;
-import xyz.mlserver.advancementcreator.Advancement;
 
 import java.util.Objects;
 

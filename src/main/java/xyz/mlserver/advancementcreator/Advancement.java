@@ -4,20 +4,27 @@ import com.google.common.base.Charsets;
 import com.google.common.io.Files;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
-import xyz.mlserver.advancementcreator.shared.ItemObject;
-import xyz.mlserver.advancementcreator.trigger.LocationTrigger;
-import xyz.mlserver.advancementcreator.trigger.Trigger;
-import xyz.mlserver.advancementcreator.util.JsonBuilder;
-import xyz.mlserver.advancementcreator.util.Validator;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.jetbrains.annotations.Nullable;
+import xyz.mlserver.advancementcreator.shared.ItemObject;
+import xyz.mlserver.advancementcreator.trigger.LocationTrigger;
+import xyz.mlserver.advancementcreator.trigger.Trigger;
+import xyz.mlserver.advancementcreator.util.JsonBuilder;
+import xyz.mlserver.advancementcreator.util.Validator;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Set;
 import java.util.logging.Level;
 
 /**

@@ -1,9 +1,9 @@
 package xyz.mlserver.advancementcreator.shared;
 
 import com.google.gson.JsonObject;
+import org.bukkit.block.Biome;
 import org.jetbrains.annotations.Nullable;
 import xyz.mlserver.advancementcreator.util.JsonBuilder;
-import org.bukkit.block.Biome;
 
 /**
  * Specifies information about a location in any world.
