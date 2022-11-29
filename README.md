@@ -4,7 +4,7 @@
 [![Twitter](https://badgen.net/twitter/follow/monster_2408?icon=twitter)](https://twitter.com/monster_2408)
 [![Discord](https://discord.com/api/guilds/556844677115150366/widget.png)](https://discord.mlserver.xyz)
 
-[Java Docs](https://adc.mlserver.jp/)
+[Java Docs](https://docs.mlserver.jp/AdvancementCreator/)
 
 *For the SpigotMC forum thread, click [here](https://www.spigotmc.org/threads/advancement-creator-rapid-advancement-creation-library.293465/).*
 
@@ -103,3 +103,9 @@ public class Main extends JavaPlugin {
 
 ## Contributing
 All contributions are greatly appreciated, be that a pull request, an issue or a message with an idea/suggestion.
+
+# JavaDocの生成
+JavaバージョンとJavadocバージョンの違いでエラーが出たため標準の機能でなく`mvn`を使用することになったため以下コマンドを使用すること
+```shell
+mvn javadoc:javadoc
+```

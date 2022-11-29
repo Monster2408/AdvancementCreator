@@ -7,11 +7,87 @@
 	<groupId>xyz.mlserver</groupId>
 	<artifactId>AdvancementCreator</artifactId>
 	<version>1.0.0</version>
-	
+
 	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<!-- 文字コード -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- コードと生成クラスのバージョン情報 -->
+		<java.version>11</java.version>
+		<!-- 認証情報を読み込む（settings.xml） -->
+		<github.global.server>github</github.global.server>
+
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
 	</properties>
+
+	<build>
+		<plugins>
+			<!-- mvn javadoc:javadoc 等を使う場合の設定 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.4.1</version>
+				<configuration>
+					<author>true</author>
+					<source>${java.version}</source>
+					<encoding>UTF-8</encoding>
+					<docencoding>UTF-8</docencoding>
+					<charset>UTF-8</charset>
+					<bottom><![CDATA[<p class="legalCopy"><small>Copyright &#169; 2022. <a href="https://monster2408.com">Monster2408</a>.</small></p>]]></bottom>
+					<header><![CDATA[<a href="https://docs.mlserver.jp"><i class="fa-solid fa-house-chimney"></i>HOME</a>]]></header>
+					<top><![CDATA[
+                        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+                        <link href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet">
+                        <script src="https://kit.fontawesome.com/159d32b7b7.js" crossorigin="anonymous"></script>
+                    ]]></top>
+					<additionalJOptions>--allow-script-in-comments</additionalJOptions>
+					<stylesheetfile>${basedir}/src/main/resources/javadoc/stylesheet.css</stylesheetfile>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.10.1</version>
+				<configuration>
+					<source>${java.version}</source>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.google.code.maven-replacer-plugin</groupId>
+				<artifactId>maven-replacer-plugin</artifactId>
+				<version>1.4.1</version>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+						<configuration>
+							<includes>
+								<include>target/site/apidocs/**/*.html</include>
+								<include>target/site/apidocs/*.html</include>
+							</includes>
+							<regex>false</regex>
+							<replacements>
+								<replacement>
+									<token><![CDATA[<head>]]></token>
+									<value>
+										<![CDATA[
+                                        <head>
+                                            <!-- アイコン -->
+                                            <link rel="icon" href="https://docs.mlserver.jp/img/favicon.ico">
+                                            <link rel="apple-touch-icon" href="https://docs.mlserver.jp/img/apple-touch-icon.png" sizes="180x180">
+                                            <link rel="icon" type="image/png" href="https://docs.mlserver.jp/img/android-touch-icon.png" sizes="192x192">
+                                        ]]>
+									</value>
+								</replacement>
+							</replacements>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 	
 	<repositories>
 		<repository>
@@ -39,47 +115,4 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>3.0.0</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>shade</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>3.0.1</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>3.0.0</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 </project>
